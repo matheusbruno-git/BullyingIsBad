@@ -1,5 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Alert } from 'react-native';
+import { colors } from './config/theme';
+
 
 const App = () => {
   return (
@@ -19,33 +21,33 @@ const App = () => {
 
       {/* Cards de Navegação */}
       <View style={styles.cardsContainer}>
-        <TouchableOpacity style={styles.card}  onPress={() => navigation.navigate('./InfoScreen')}>
+        <TouchableOpacity style={styles.card}  onPress={() => navigation.navigate('./screens/InfoScreen')}>
           <Text style={styles.cardTitle}>O que é Bullying</Text>
           <Text style={styles.cardText}>
             Entenda o que é bullying, suas diferenças em relação a conflitos e como identificar sinais de que alguém está sofrendo.
           </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.card}  onPress={() => navigation.navigate('./TypesScreen')}>
+        <TouchableOpacity style={styles.card}  onPress={() => navigation.navigate('./screens/TypesScreen')}>
           <Text style={styles.cardTitle}>Tipos de Bullying</Text>
           <Text style={styles.cardText}>
             Conheça os diferentes tipos de bullying: físico, verbal, social e virtual (cyberbullying).
           </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.card}  onPress={() => navigation.navigate('./ActingUpScreen')}>
+        <TouchableOpacity style={styles.card}  onPress={() => navigation.navigate('./screens/ActingUpScreen')}>
           <Text style={styles.cardTitle}>Como Agir</Text>
           <Text style={styles.cardText}>
             Aprenda o que fazer se você é vítima, testemunha ou até mesmo se você está praticando bullying e quer mudar.
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.card}  onPress={() => navigation.navigate('./ResourcesScreen')}>
+        <TouchableOpacity style={styles.card}  onPress={() => navigation.navigate('./screens/ResourcesScreen')}>
           <Text style={styles.cardTitle}>Recursos e Referências</Text>
           <Text style={styles.cardText}>
             Acesse materiais extras, um glossário básico e as fontes citadas para aprofundar seu conhecimento.
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.card}  onPress={() => navigation.navigate('./HelpScreen')}>
+        <TouchableOpacity style={styles.card}  onPress={() => navigation.navigate('./screens/HelpScreen')}>
           <Text style={styles.cardTitle}>Ajuda Imediata</Text>
           <Text style={styles.cardText}>
             Encontre contatos de ajuda e suporte para situações de bullying.
@@ -64,10 +66,10 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f4f4f9',
+    backgroundColor: colors.white,
   },
   header: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: colors.electric_indigo,
     padding: 20,
     alignItems: 'center',
   },
@@ -116,11 +118,11 @@ const styles = StyleSheet.create({
   },
   cardText: {
     fontSize: 14,
-    color: '#555',
+    color: colors.ash_gray,
     marginTop: 10,
   },
   footer: {
-    backgroundColor: '#333',
+    backgroundColor: colors.medium_slate_blue,
     padding: 10,
     alignItems: 'center',
     marginTop: 30,

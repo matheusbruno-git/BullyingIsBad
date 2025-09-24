@@ -1,12 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import Header from '../components/Header';
+import { colors } from '../config/theme';
 
 
 const HelpScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <Header />
             <TouchableOpacity
                 style={styles.button}
                 onPress={() => navigation.navigate('Report')}
@@ -32,13 +31,13 @@ const HelpScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#f6f7fb',
+        backgroundColor: colors.white,
         alignItems: 'center',
         justifyContent: 'center',
         padding: 24,
     },
     button: {
-        backgroundColor: '#ff6f61',
+        backgroundColor: colors.electric_indigo,
         paddingVertical: 14,
         paddingHorizontal: 32,
         borderRadius: 8,
@@ -47,7 +46,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     buttonText: {
-        color: '#fff',
+        color: colors.white,
         fontSize: 18,
         fontWeight: '600',
     },

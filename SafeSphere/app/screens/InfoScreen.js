@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, ScrollView, StyleSheet } from 'react-native';
+import { colors } from '../config/theme';
 
 const InfoScreen = () => {
   return (
@@ -34,13 +35,13 @@ const InfoScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#f4f4f9',
+    backgroundColor: colors.white,
   },
   title: {
     fontSize: 28,
     fontWeight: 'bold',
     marginBottom: 20,
-    color: '#4CAF50',
+    color: colors.electric_indigo,
     textAlign: 'center',
   },
   sectionTitle: {
@@ -48,19 +49,19 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     marginBottom: 10,
     marginTop: 20,
-    color: '#333',
+    color: colors.black,
   },
   paragraph: {
     fontSize: 16,
     lineHeight: 24,
-    color: '#555',
+    color: colors.ash_gray,
     marginBottom: 10,
   },
   listItem: {
     fontSize: 16,
     marginLeft: 10,
     marginBottom: 6,
-    color: '#555',
+    color: colors.ash_gray,
   },
   footerNote: {
     marginTop: 30,

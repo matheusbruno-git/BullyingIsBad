@@ -1,7 +1,8 @@
 import React from 'react';
 import { ScrollView, Text, StyleSheet, TouchableOpacity, Alert, Linking } from 'react-native';
+import { colors } from '../config/theme';
 
-const RecursosReferencias = () => {
+const ResourcesScreen = () => {
   const openLink = (url) => {
     Linking.openURL(url).catch(() => {
       Alert.alert('Erro', 'Não foi possível abrir o link.');
@@ -43,13 +44,13 @@ const RecursosReferencias = () => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#f4f4f9',
+    backgroundColor: colors.white,
   },
   title: {
     fontSize: 28,
     fontWeight: 'bold',
     marginBottom: 20,
-    color: '#4CAF50',
+    color: colors.electric_indigo,
     textAlign: 'center',
   },
   sectionTitle: {
@@ -61,7 +62,7 @@ const styles = StyleSheet.create({
   },
   link: {
     fontSize: 16,
-    color: '#1E90FF',
+    color: colors.medium_slate_blue,
     marginBottom: 8,
     textDecorationLine: 'underline',
   },
@@ -69,11 +70,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginLeft: 10,
     marginBottom: 6,
-    color: '#555',
+    color: colors.ash_gray,
   },
   reference: {
     fontSize: 14,
-    color: '#444',
+    color: colors.black,
     marginBottom: 8,
     fontStyle: 'italic',
   },
